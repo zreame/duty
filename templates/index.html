@@ -14,15 +14,15 @@
         </div>
 
         <div class="section">
-            <p>Day of Year: <strong>{{ data.day_of_year }}</strong> ({{ data.is_day_odd }})</p>
             <div class="duty-label">neko_duty: <span class="status-val">{{ data.neko_status }}</span></div>
             <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=500&auto=format&fit=crop" alt="Cat">
+            <p class="duty-label demphasized"><i>day <u>{{ data.day_of_year }}({{ data.is_day_odd }})</u> of the year</span></i></p>
         </div>
 
         <div class="section">
-            <p>Week Number: <strong>{{ data.week_number }}</strong> ({{ data.is_week_odd }})</p>
             <div class="duty-label">wipey_duty: <span class="status-val">{{ data.wipey_status }}</span></div>
             <img src="{{ url_for('static', filename='barista-cleaning-table-while-wearing-medical-mask.jpg') }}" alt="Wiping table">
+            <p class="duty-label demphasized"><i>week <u>{{ data.week_number }}({{ data.is_week_odd }})</u> of the year</span></i></p>
         </div>
     </div>
 </body>

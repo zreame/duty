@@ -13,18 +13,18 @@ def index():
     # Logic for your custom duties
     # Day is Odd -> ayy, Even -> ism
     if day_num % 2 != 0:
-        is_day_odd = "Odd day"
+        is_day_odd = "odd"
         neko_status = "Ayy" 
     else: 
-        is_day_odd = "Even day"
+        is_day_odd = "even"
         neko_status = "Ism"
     
     # Week is Even -> ayy, Odd -> ism
     if week_num % 2 != 0:
-        is_week_odd = "Odd week"
+        is_week_odd = "odd"
         wipey_status = "Ism" 
     else: 
-        is_week_odd = "Even week"
+        is_week_odd = "even"
         wipey_status = "Ayy"
 
     context = {
