@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Duty Dashboard</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; padding: 40px; background-color: #eef2f3; color: #333; }
+        .container { max-width: 500px; margin: auto; }
+        .header { margin-bottom: 30px; border-bottom: 2px solid #ccc; padding-bottom: 10px; }
+        .section { background: white; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .duty-label { font-weight: bold; font-family: monospace; font-size: 1.2em; color: #2c3e50; }
+        .status-val { color: #e67e22; font-weight: bold; }
+        img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>{{ data.full_date_time }}</h2>
+        </div>
+
+        <!-- Neko Section -->
+        <div class="section">
+            
+            <p>Day of Year: {{ data.day_of_year }} ({{ data.is_day_odd }})</p>
+            <div class="duty-label">neko_duty: <span class="status-val">{{ data.neko_status }}</span></div>
+            <br>
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=500&auto=format&fit=crop" alt="Cat">
+        </div>
+
+        <!-- Wipey Section -->
+        <div class="section">
+            
+            <p>Week Number: {{ data.week_number }} ({{ data.is_week_odd }})</p>
+            <div class="duty-label">wipey_duty: <span class="status-val">{{ data.wipey_status }}</span></div>
+            <br>
+            <img src="{{ url_for('static', filename='barista-cleaning-table-while-wearing-medical-mask.jpg') }}" alt="Wiping table">
+        </div>
+    </div>
+</body>
+</html>
