@@ -1,11 +1,11 @@
 from flask import Flask, render_template
-from datetime import datetime
+from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    now = datetime.now()
+    now = datetime.now() + timedelta(hours=8)
     
     day_num = int(now.strftime("%j"))
     week_num = now.isocalendar()[1]
